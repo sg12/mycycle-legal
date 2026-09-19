@@ -107,9 +107,11 @@
 
       <p>
         MyCycle (<code>com.sg12.myCycle</code>) is a period-tracking calendar and daily
-        symptom diary. It is built so your data never leaves your device unless you
-        take an explicit action to move it. This page describes exactly what the app
-        stores and how it handles it.
+        symptom diary. Everything you enter — period dates, diary entries, symptoms —
+        stays on your device unless you take an explicit action to move it; the app
+        also sends a short list of anonymous technical usage events, described below.
+        This page describes exactly what the app stores, what it sends, and how it
+        handles both.
       </p>
 
       <h2>What data is stored</h2>
@@ -134,15 +136,31 @@
 
       <h2>Data sharing and third parties</h2>
       <p>
-        MyCycle does not send your data to anyone — not to the developer, not to ad
-        networks, not to analytics services, not to any third party. The app contains
-        no ads, no analytics, and no tracking.
+        MyCycle never sends your cycle or diary data to anyone — not to the developer,
+        not to ad networks, not to any third party. The app contains no ads and no
+        third-party trackers of any other kind. It does send anonymous technical
+        usage analytics, described in the next section.
       </p>
       <p>
-        The only way data ever leaves the device is a backup you initiate yourself:
-        the app creates a JSON file, and you decide where to save it and whether to
-        share it with anyone at all. Importing works the same way — you choose the
-        backup file yourself.
+        The only way your cycle or diary data ever leaves the device is a backup you
+        initiate yourself: the app creates a JSON file, and you decide where to save
+        it and whether to share it with anyone at all. Importing works the same way —
+        you choose the backup file yourself.
+      </p>
+
+      <h2>Anonymous usage analytics</h2>
+      <p>
+        The app sends a small number of anonymous, technical usage events — the app
+        was opened, the Settings screen was opened, a backup was exported or
+        imported, the language was changed, the Privacy Policy was opened — to
+        PostHog (EU region) to help us understand overall usage and improve the app.
+      </p>
+      <p>
+        These events are tied only to a randomly generated, pseudonymous
+        installation identifier that is not linked to your name, account, or any
+        other personal information. They <strong>never</strong> include period
+        dates, symptoms, mood, temperature, notes, or anything else you enter into
+        the diary. This data is not sold or shared with advertisers.
       </p>
 
       <h2>Notifications</h2>
@@ -195,9 +213,11 @@
 
       <p>
         MyCycle (<code>com.sg12.myCycle</code>) — календарь женского цикла и дневник
-        самочувствия. Это приложение спроектировано так, чтобы ваши данные никогда не
-        покидали ваше устройство без вашего явного действия. Эта страница описывает,
-        какие данные приложение хранит и как именно оно с ними работает.
+        самочувствия. Всё, что вы вносите — даты менструации, дневниковые записи,
+        симптомы — остаётся на вашем устройстве без вашего явного действия; кроме
+        этого, приложение отправляет небольшой список анонимных технических событий
+        использования, описанных ниже. Эта страница подробно описывает, какие данные
+        приложение хранит, что оно отправляет и как именно оно с этим работает.
       </p>
 
       <h2>Какие данные хранятся</h2>
@@ -223,16 +243,33 @@
 
       <h2>Передача данных и обмен с третьими лицами</h2>
       <p>
-        MyCycle не передаёт ваши данные никому — ни разработчику, ни рекламным сетям,
-        ни аналитическим сервисам, ни каким-либо третьим лицам. В приложении нет
-        рекламы, нет аналитики и нет трекинга.
+        MyCycle никогда не передаёт данные о вашем цикле и дневнике никому — ни
+        разработчику, ни рекламным сетям, ни каким-либо третьим лицам. В приложении
+        нет рекламы и сторонних трекеров какого-либо иного рода. Приложение отправляет
+        анонимную техническую аналитику использования — описано в следующем разделе.
       </p>
       <p>
-        Единственный способ, которым данные покидают устройство, — резервное
-        копирование, которое вы запускаете сами: приложение создаёт файл в формате
-        JSON, и вы сами решаете, где его сохранить и с кем (если вообще с кем-то) им
-        поделиться. Импорт данных работает так же — вы сами выбираете файл резервной
-        копии.
+        Единственный способ, которым данные о цикле и дневнике покидают устройство, —
+        резервное копирование, которое вы запускаете сами: приложение создаёт файл в
+        формате JSON, и вы сами решаете, где его сохранить и с кем (если вообще с
+        кем-то) им поделиться. Импорт данных работает так же — вы сами выбираете файл
+        резервной копии.
+      </p>
+
+      <h2>Анонимная аналитика использования</h2>
+      <p>
+        Приложение отправляет небольшое количество анонимных технических событий
+        использования — открытие приложения, открытие экрана настроек, экспорт или
+        импорт резервной копии, смена языка, открытие политики конфиденциальности —
+        в PostHog (регион ЕС), чтобы помочь нам понять общую картину использования и
+        улучшать приложение.
+      </p>
+      <p>
+        Эти события привязаны только к случайно сгенерированному, псевдонимному
+        идентификатору установки, не связанному с вашим именем, аккаунтом или какой-
+        либо другой личной информацией. Они <strong>никогда</strong> не включают даты
+        менструации, симптомы, настроение, температуру, заметки или что-либо ещё, что
+        вы вносите в дневник. Эти данные не продаются и не передаются рекламодателям.
       </p>
 
       <h2>Уведомления</h2>
