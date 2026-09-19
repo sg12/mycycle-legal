@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,15 +72,17 @@
     font-size: 0.9em;
   }
   /* Anchor-based language switch, no JS. Default (no #fragment, or an
-     unrecognized one) shows Russian — the app's source-of-truth language,
-     per docs/PLAN.md — because #en is hidden unless targeted, and #ru has
-     no such condition. #en must precede #ru in the markup below: the
-     "hide ru when en is targeted" rule relies on the general sibling
-     combinator, which can only select *later* siblings. */
-  section#en { display: none; }
-  section#ru { display: block; }
-  section#en:target { display: block; }
-  section#en:target ~ section#ru { display: none; }
+     unrecognized one) shows English (2026-09-19: the app's first real
+     listing/App Review submission is English, superseding the earlier
+     Russian-source-of-truth default from docs/PLAN.md) — #ru is hidden
+     unless targeted, and #en has no such condition. #ru must precede #en
+     in the markup below: the "hide en when ru is targeted" rule relies on
+     the general sibling combinator, which can only select *later*
+     siblings. */
+  section#ru { display: none; }
+  section#en { display: block; }
+  section#ru:target { display: block; }
+  section#ru:target ~ section#en { display: none; }
   footer {
     margin-top: 28px;
     color: var(--muted);
@@ -100,112 +102,6 @@
   </header>
 
   <div class="card">
-
-    <section id="en">
-      <h2>MyCycle Privacy Policy</h2>
-      <p class="effective">Effective September 19, 2026</p>
-
-      <p>
-        MyCycle (<code>com.sg12.myCycle</code>) is a period-tracking calendar and daily
-        symptom diary. Everything you enter — period dates, diary entries, symptoms —
-        stays on your device unless you take an explicit action to move it; the app
-        also sends a short list of anonymous technical usage events, described below.
-        This page describes exactly what the app stores, what it sends, and how it
-        handles both.
-      </p>
-
-      <h2>What data is stored</h2>
-      <p>The app stores on your device only what you enter into it:</p>
-      <ul>
-        <li>period start and end dates;</li>
-        <li>daily diary entries: flow, mood, temperature, and a free-text note;</li>
-        <li>symptom tags — from the built-in catalog, or ones you add yourself;</li>
-        <li>your settings — average cycle length and period length.</li>
-      </ul>
-      <p>
-        No other data (location, contacts, photos, data from other apps, etc.) is
-        requested or read by the app.
-      </p>
-
-      <h2>Where data is stored</h2>
-      <p>
-        All data is stored locally on your device, in the app's own database
-        (SQLite). MyCycle has no server and no account — there is nowhere in the
-        background for your data to be sent to, and it isn't.
-      </p>
-
-      <h2>Data sharing and third parties</h2>
-      <p>
-        MyCycle never sends your cycle or diary data to anyone — not to the developer,
-        not to ad networks, not to any third party. The app contains no ads and no
-        third-party trackers of any other kind. It does send anonymous technical
-        usage analytics, described in the next section.
-      </p>
-      <p>
-        The only way your cycle or diary data ever leaves the device is a backup you
-        initiate yourself: the app creates a JSON file, and you decide where to save
-        it and whether to share it with anyone at all. Importing works the same way —
-        you choose the backup file yourself.
-      </p>
-
-      <h2>Anonymous usage analytics</h2>
-      <p>
-        The app sends a small number of anonymous, technical usage events — the app
-        was opened, the Settings screen was opened, a backup was exported or
-        imported, the language was changed, the Privacy Policy was opened — to
-        PostHog (EU region) to help us understand overall usage and improve the app.
-      </p>
-      <p>
-        These events are tied only to a randomly generated, pseudonymous
-        installation identifier that is not linked to your name, account, or any
-        other personal information. They <strong>never</strong> include period
-        dates, symptoms, mood, temperature, notes, or anything else you enter into
-        the diary. This data is not sold or shared with advertisers.
-      </p>
-
-      <h2>Notifications</h2>
-      <p>
-        The app may show local reminders (for example, an upcoming period). These are
-        computed and scheduled entirely on your device, with no server involved.
-      </p>
-
-      <h2>Accounts</h2>
-      <p>
-        The app can be used without creating an account — MyCycle simply has no
-        concept of user accounts.
-      </p>
-
-      <h2>Deleting your data</h2>
-      <p>
-        Because there is no server, uninstalling the app deletes all of its data
-        completely — it can only be recovered from a backup file you made yourself.
-      </p>
-
-      <h2>Children</h2>
-      <p>
-        MyCycle is not directed at children under 13 and does not knowingly collect
-        data from them.
-      </p>
-
-      <h2>Accuracy of predictions</h2>
-      <p>
-        Phase, period, and fertile-window predictions are estimates based on the
-        averages you provide. They are not medical advice and not a method of
-        contraception.
-      </p>
-
-      <h2>Changes to this policy</h2>
-      <p>
-        If this policy changes, the updated version will be published on this same
-        page with a new effective date.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        Privacy questions or feedback about the app:
-        <a href="mailto:nsuemml@gmail.com">nsuemml@gmail.com</a>
-      </p>
-    </section>
 
     <section id="ru">
       <h2>Политика конфиденциальности MyCycle</h2>
@@ -314,6 +210,112 @@
       <h2>Контакты</h2>
       <p>
         Вопросы о приватности и обратная связь по приложению:
+        <a href="mailto:nsuemml@gmail.com">nsuemml@gmail.com</a>
+      </p>
+    </section>
+
+    <section id="en">
+      <h2>MyCycle Privacy Policy</h2>
+      <p class="effective">Effective September 19, 2026</p>
+
+      <p>
+        MyCycle (<code>com.sg12.myCycle</code>) is a period-tracking calendar and daily
+        symptom diary. Everything you enter — period dates, diary entries, symptoms —
+        stays on your device unless you take an explicit action to move it; the app
+        also sends a short list of anonymous technical usage events, described below.
+        This page describes exactly what the app stores, what it sends, and how it
+        handles both.
+      </p>
+
+      <h2>What data is stored</h2>
+      <p>The app stores on your device only what you enter into it:</p>
+      <ul>
+        <li>period start and end dates;</li>
+        <li>daily diary entries: flow, mood, temperature, and a free-text note;</li>
+        <li>symptom tags — from the built-in catalog, or ones you add yourself;</li>
+        <li>your settings — average cycle length and period length.</li>
+      </ul>
+      <p>
+        No other data (location, contacts, photos, data from other apps, etc.) is
+        requested or read by the app.
+      </p>
+
+      <h2>Where data is stored</h2>
+      <p>
+        All data is stored locally on your device, in the app's own database
+        (SQLite). MyCycle has no server and no account — there is nowhere in the
+        background for your data to be sent to, and it isn't.
+      </p>
+
+      <h2>Data sharing and third parties</h2>
+      <p>
+        MyCycle never sends your cycle or diary data to anyone — not to the developer,
+        not to ad networks, not to any third party. The app contains no ads and no
+        third-party trackers of any other kind. It does send anonymous technical
+        usage analytics, described in the next section.
+      </p>
+      <p>
+        The only way your cycle or diary data ever leaves the device is a backup you
+        initiate yourself: the app creates a JSON file, and you decide where to save
+        it and whether to share it with anyone at all. Importing works the same way —
+        you choose the backup file yourself.
+      </p>
+
+      <h2>Anonymous usage analytics</h2>
+      <p>
+        The app sends a small number of anonymous, technical usage events — the app
+        was opened, the Settings screen was opened, a backup was exported or
+        imported, the language was changed, the Privacy Policy was opened — to
+        PostHog (EU region) to help us understand overall usage and improve the app.
+      </p>
+      <p>
+        These events are tied only to a randomly generated, pseudonymous
+        installation identifier that is not linked to your name, account, or any
+        other personal information. They <strong>never</strong> include period
+        dates, symptoms, mood, temperature, notes, or anything else you enter into
+        the diary. This data is not sold or shared with advertisers.
+      </p>
+
+      <h2>Notifications</h2>
+      <p>
+        The app may show local reminders (for example, an upcoming period). These are
+        computed and scheduled entirely on your device, with no server involved.
+      </p>
+
+      <h2>Accounts</h2>
+      <p>
+        The app can be used without creating an account — MyCycle simply has no
+        concept of user accounts.
+      </p>
+
+      <h2>Deleting your data</h2>
+      <p>
+        Because there is no server, uninstalling the app deletes all of its data
+        completely — it can only be recovered from a backup file you made yourself.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        MyCycle is not directed at children under 13 and does not knowingly collect
+        data from them.
+      </p>
+
+      <h2>Accuracy of predictions</h2>
+      <p>
+        Phase, period, and fertile-window predictions are estimates based on the
+        averages you provide. They are not medical advice and not a method of
+        contraception.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes, the updated version will be published on this same
+        page with a new effective date.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Privacy questions or feedback about the app:
         <a href="mailto:nsuemml@gmail.com">nsuemml@gmail.com</a>
       </p>
     </section>
